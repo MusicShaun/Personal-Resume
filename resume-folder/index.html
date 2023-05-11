@@ -8,16 +8,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
+ <!-- Normalize or reset CSS with your favorite library -->
+ <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 
+ <!-- Load paper.css for happy printing -->
+ <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css"> -->
+
+ <!-- Set page size here: A5, A4 or A3 -->
+ <!-- Set also "landscape" if you need -->
+ <style>@page { size: A4 }</style> 
 </head>
-<body>
-
+<body class="A4">
+  <page class="sheet">
   <section class="top-left">
     <div class="top-left__box">
         <header><h1>SHAUN <br/> PICKETT</h1></header>
@@ -47,7 +55,13 @@
 
 
   <section class="top-right">
-
+    <div class="tr-box">
+      <h3 class="skills">Some stuff</h3>
+      <p class="tr-p">
+        big old paragrapg a bout sasdf kdf j djfs jsdf jsdfjkjasdfj sdkfj
+        jasdfk jk  j jksdfjasjf hu hij i ji jisfjdi fisjfi jtuff
+      </p>
+    </div>
   </section>
 
 
@@ -94,7 +108,7 @@
       <div class="br-box">
         <h3 class="skills">PROFESSIONAL EXPERIENCE</h3>
         <p class="br-title">Mix Engineer & Mastering ENgineer, Song Writer</p>
-        <p >01/2011 - 01/2022</p>
+        <p class="date">01/2011 - 01/2022</p>
         <ul  class="skills-list">
           <li class="br-list"><span>Collaborated with producers and performers to create and brainstorm new ideas and works.</span></li>
           <li class="br-list"><span>Toured as a performer.</span></li>
@@ -102,7 +116,7 @@
           <li class="br-list"><span>Used Ableton and hardware to mix and edit tracks.</span></li>
         </ul>
         <p class="br-title">Helena College - Teacher</p>
-        <p>01/2014 - 01/2017</p>
+        <p class="date">01/2014 - 01/2017</p>
         <ul  class="skills-list">
           <li class="br-list"><span>Worked cooperatively with other teachers, administrators and parents to help students reach learning objectives.</span></li>
           <li class="br-list"><span>Communicated frequently with parents, students and faculty to provide feedback and discuss instructional strategies.</span></li>
@@ -128,6 +142,6 @@
 
 
 
-  
+</page>
 </body>
 </html>
