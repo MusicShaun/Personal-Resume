@@ -21,13 +21,24 @@
   --BULLET-POINT-FONT-SIZE: 10px;
   --LIST-FONT-SIZE: 16px;
   --PARAGRAPH-FONT-SIZE: 12px;
+
+  --color-tl: hsl(203,73%,75%);
+  --color-bl: hsl(204,76%,90%);
+  --color-tr: hsl(202,70%,95%);
+  --color-br: hsl(255);
+
+  /* these are favourites */
+  /* --color-bl: hsl(46,100%,78%);
+  --color-tl: hsl(215,81%,79%);
+  --color-tr: hsl(28,86%,80%);
+  --color-br: hsl(193,70%,82%); */
 }
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet', 'PT sans', 'Oswald';
-  color: #343b30;
+  color: var(--BLACK);
 }
 
 page {
@@ -35,14 +46,16 @@ page {
   height: 296.99mm;
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
+  overflow: hidden;
 }
 .top-left {
   width: var(--COL1);
   height: var(--ROW1);
-  background-color: hsl(203,73%,75%);
+  background-color: var(--color-tl);
   color: var(--BLACK);
 
-  & .top-left__box {
+  & .tl-box {
     width: 100%;
     height: 100%;
     display: flex;
@@ -69,7 +82,7 @@ page {
       height: 30px;
       display: flex;
       align-items: center;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
 
       & .icon  {
         display: block;
@@ -97,9 +110,9 @@ page {
 .bottom-left{
   width: var(--COL1);
   height: calc(100% - var(--ROW1));
-  background-color: hsl(204,76%,90%);
+  background-color: var(--color-bl);
 
-  & .bottom-left__box {
+  & .bl-box {
     width: 100%;
     height: 100%;
     display: flex;
@@ -109,7 +122,7 @@ page {
   }
   & .skills {
     font-size: 20px;
-    padding-bottom: 1rem;
+    padding-bottom: 0.4rem;
   }
   & .skills-list {
     padding-bottom: 2rem;
@@ -132,6 +145,10 @@ page {
     }
     & .p-bold {
       font-weight: 700;
+
+      & span {
+        font-family: 'Trebuchet MS italic';
+      }
     }
   }
 
@@ -150,14 +167,17 @@ page {
 .top-right{
   width: calc(100% - var(--COL1));
   height: var(--ROW1);
-  background-color: hsl(202,70%,95%);
+  background-color: var(--color-tr);
 
   & .tr-box {
     width: 100%;
     height: 100%;
     padding-left: var(--LEFT-COLUMN-MARGIN);
     word-break: break-all;
-    margin-top: var(--TOP-MARGIN);
+    /* margin-top: var(--TOP-MARGIN); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     & .skills {
       font-size: 20px;
@@ -165,7 +185,8 @@ page {
       margin-bottom: 1rem;
     }
     & .tr-p {
-      text-justify: inter-word;
+      text-justify:distribute;
+      word-break: keep-all;
       padding-right: 1rem;
     }
   }
@@ -181,6 +202,7 @@ page {
 .bottom-right{
   width: calc(100% - var(--COL1));
   height: calc(100% - var(--ROW1));
+  background-color: var(--color-br);
 
   & .br-container {
     width: calc(100% - var(--LEFT-COLUMN-MARGIN));
@@ -191,6 +213,7 @@ page {
     margin-top: var(--TOP-MARGIN);
     padding-right: 2rem;
   }
+  
   & .skills {
     font-size: 20px;
     padding-bottom: 1rem;
@@ -201,6 +224,7 @@ page {
   & .date {
     padding-bottom: 1rem;
     font-family: 'Trebuchet MS italic';
+    font-size: var(--PARAGRAPH-FONT-SIZE)
   }
   & .skills-list {
     padding-bottom: 2rem;
@@ -216,10 +240,9 @@ page {
         text-justify: inter-word;
 
       }
+      & .br-link {
+        font-size: var(--LIST-FONT-SIZE);
+      }
     }
   }
-
-
-
-
 }
