@@ -1,14 +1,18 @@
 @page {
   size: A4;
   margin: 0;
-  
 }
 @media print {
   body, html, page {
     margin: 0;
     box-shadow: none;
     size: A4;
+    padding: 0;
+    
   }
+}
+* {
+  box-sizing: border-box;
 }
 @font-face { font-family: 'Trebuchet'; src: url('./trebuc.ttf') }
 @font-face { font-family: 'Trebuchet MS italic'; src: url('./Trebuchet-MS-Italic.ttf') }
@@ -43,7 +47,7 @@
 
 page {
   width: 210mm;
-  height: 296.99mm;
+  height: 297mm;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
