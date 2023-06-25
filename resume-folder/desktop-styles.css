@@ -20,6 +20,7 @@
   --COL1: 40%;
   --ROW1: 30%;
   --BLACK: #343b30;
+  --LESS-BLACK: #3e433a;
   --LEFT-COLUMN-MARGIN: 2.8rem;
   --TOP-MARGIN: 2rem;
   --BULLET-POINT-FONT-SIZE: 10px;
@@ -127,9 +128,11 @@ page {
   & .skills {
     font-size: 20px;
     padding-bottom: 0.4rem;
+    color: var(--BLACK);
   }
   & .skills-list {
     padding-bottom: 2rem;
+    color: var(--LESS-BLACK);
 
     & li {
       margin: 0 0 0 0.8rem;
@@ -224,6 +227,7 @@ page {
   }
   & .br-title {
     font-weight: 900;
+    color: var(--LESS-BLACK);
   }
   & .date {
     padding-bottom: 1rem;
