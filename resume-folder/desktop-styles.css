@@ -26,6 +26,7 @@
   --BULLET-POINT-FONT-SIZE: 10px;
   --LIST-FONT-SIZE: 16px;
   --PARAGRAPH-FONT-SIZE: 12px;
+  --MIDDLE-FONT-SIZE: 13px;
 
   --color-tl: hsl(203,73%,75%);
   --color-bl: hsl(204,76%,90%);
@@ -51,9 +52,14 @@ page {
   height: 297mm;
   display: flex;
   flex-wrap: wrap;
-  margin: auto;
   overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
+
+
+
+/* TOP LEFT  */
 .top-left {
   width: var(--COL1);
   height: var(--ROW1);
@@ -99,7 +105,7 @@ page {
         margin-right: 1rem;
       }
       & .icon-text {
-        font-size: 13px;
+        font-size: var(--MIDDLE-FONT-SIZE);
       }
     }
   }
@@ -111,7 +117,7 @@ page {
 
 
 
-
+/*  BOTTOM LEFT */
 .bottom-left{
   width: var(--COL1);
   height: calc(100% - var(--ROW1));
@@ -170,7 +176,7 @@ page {
 
 
 
-
+/* TOP RIGHT */
 .top-right{
   width: calc(100% - var(--COL1));
   height: var(--ROW1);
@@ -195,6 +201,7 @@ page {
       text-justify:distribute;
       word-break: keep-all;
       padding-right: 1rem;
+      font-size: var(--MIDDLE-FONT-SIZE);
     }
   }
 }
@@ -205,7 +212,7 @@ page {
 
 
 
-
+/* BOTTOM RIGHT */
 .bottom-right{
   width: calc(100% - var(--COL1));
   height: calc(100% - var(--ROW1));
@@ -249,7 +256,7 @@ page {
 
       }
       & .br-link {
-        font-size: var(--LIST-FONT-SIZE);
+        font-size: var(--PARAGRAPH-FONT-SIZE);
       }
     }
   }
